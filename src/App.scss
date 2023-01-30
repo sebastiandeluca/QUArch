@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,400;0,700;0,900;1,100;1,400;1,700;1,900&display=swap');
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.App {
+  z-index: 1;
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  transition: all 550ms ease;
+  width: 10px;
+  justify-self: center;
+}
+
+
+::-webkit-scrollbar-track {
+  background-color: #fabd0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(185, 14, 49, 1);
+  border-radius: 15px;
+  &:hover {
+    background-color: rgb(146, 17, 42);
+  }
+}
+
+.nav {
+  transition: all 150ms ease;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  z-index: 5;
+  padding-right: 2.5em;
+  background: #002452;
+}
+.nav ul {
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  justify-self: center;
+  justify-content: space-evenly;
+  text-align: center;
+  margin: 0;
+  padding: 1em;
+}
+
+.navObj {
+  transition: all 150ms ease;
+  font-size: large;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  text-decoration: none;
+  color: #fabd0f;
+  font-weight: 800;
+  background-clip: text;
+  
+  &:hover {
+    transition: all 150ms ease;
+    color: white;
+}}
+
+.App {
+	background: linear-gradient(-45deg, rgba(250, 189, 15, 0.5), rgba(0, 36, 82, 0.5), rgba(185, 14, 49, 0.5));
+	background-size: 200% 200%;
+	animation: gradient 30s ease infinite;
+	min-height: 75vh;
+}
+
+.Assignments {
+	background: linear-gradient(60deg, rgba(185, 14, 49, 0.5),rgba(0, 36, 82, 0.5),rgba(250, 189, 15, 0.5) );
+	background-size: 200% 200%;
+	animation: gradient 30s ease infinite;
+	min-height: 75vh;
+}
+.Team {
+	background: linear-gradient(-60deg, rgba(185, 14, 49, 0.5),rgba(0, 36, 82, 0.5),rgba(250, 189, 15, 0.5) );
+	background-size: 200% 200%;
+	animation: gradient 30s ease infinite;
+	min-height: 75vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.Title
+{
+  transition: all 150ms ease;
+  font-size: 92px;
+  font-weight: 900;
+  color: #002452;
+  z-index: 1;
+  text-align: center;
+
+}
+
+.Title:hover {
+  transition: all 150ms ease;
+  transform: scale(1.05);
+  filter: drop-shadow(0px 1vh #fabd0f)  ;
+}
+
+.Section
+{
+  z-index: 1;
+  transition: all 150ms ease;
+  color: black;
+  padding: 0 2em 0 2em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.Section:hover {
+  transition: all 150ms ease;
+  transform: scale(1.1);
+  filter: drop-shadow(0px 0.5vh #fabd0f)  ;
+}
+
+.Section a {
+  text-decoration: none;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.shapes {
+  animation: backnforth 10s infinite linear;
+  background-image: url('img/background.svg');
+  background-size: 135%;
+  min-height: 93.5vh;
+    width: calc(100vw - 5%);
+    position: absolute;
+    z-index: -1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+  }
+}
+
+.App-main {
+  background-blend-mode:exclusion;
+  background-size: cover;
+  min-height: 90.15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Section-Container
+{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+}
+
+.Obj-Container {
+  justify-self: center;
+  flex: 1 0 25%;
+  margin: 1em;
+  text-align: center;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+@keyframes backnforth {
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(35px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  75% {
+    transform: translateX(-35px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.Team-Member {
+  font-weight: 700;
+  -webkit-text-stroke: rgba(185, 14, 49, 1) 1px;
+}
+
+#team-photo {
+  transition: all 150ms ease;
+  width: calc(5em + 5vw);
+  height: calc(5em + 5vw);
+  object-fit: cover;
+  border: #002452 4px solid;
+  border-radius: 10%;
+}
+
+#team-photo:hover {
+  transition: all 150ms ease;
+  transform: scale(1.1);
+  border: #fabd0f 4px solid;
+  filter: drop-shadow(0px 0.75vh rgba(185, 14, 49, 1))  ;
+}
