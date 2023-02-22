@@ -1,7 +1,16 @@
-import React from 'react';
+import { React, useState } from 'react';
 import '../App.scss';
+import { Document, pdfjs, Page } from 'react-pdf';
+import assignmentOne from '../assignments/assn1.pdf'
+import 'react-pdf/dist/esm/Page/TextLayer.css';
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+
 
 function Assignments() {
+  const [numPages, useNumberPages] = useState(null);
+  const OnDocumentLoadSuccess = ({ numPages }, useNumberPages) => {
+    useNumberPages(numPages);
+  };
     return (
       <div className="Assignments">
       <div className='bg-1'>
@@ -12,7 +21,20 @@ function Assignments() {
         </header>
         <body className="App-main">
           <div className="Section-Container">
-This Page Will Be Updated When We Have Assignments to Post
+            <div className='Assignment-Container'>
+              <div className='Assignment'>
+                <h4>Assignment 1 - Conceptual Architecture Report</h4>
+                <a className='button'href={assignmentOne} target="_blank" rel="noreferrer">Download</a>
+              </div>
+              <div className='Assignment'>
+                <h4>Assignment 2 - Concrete Architecture Report</h4>
+                <p>Not yet available.</p>
+              </div>
+              <div className='Assignment'>
+                <h4>Assignment 3 - Proposal for Enhancement Report</h4>
+                <p>Not yet available.</p>
+              </div>
+            </div>
           </div>
         </body>
         <footer>

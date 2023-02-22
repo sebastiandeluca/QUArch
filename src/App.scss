@@ -10,6 +10,27 @@ body {
   text-align: center;
 }
 
+.button {
+  transition: all 250ms;
+  padding: 1em;
+  font-size: medium;
+  text-decoration: none;
+  background-color: #002452;
+  border: 4px solid transparent;
+  color: #fabd0f;
+  font-family: 'Raleway';
+  font-weight: bolder;
+  border-radius: 15px;
+
+  &:hover {
+    transition: all 150ms ease;
+    transform: scale(1.05);
+    border: 4px solid rgba(185, 14, 49, 1);
+    filter: drop-shadow(0px 0.5vh #fabd0f)  ;
+
+  }
+}
+
 ::-webkit-scrollbar {
   transition: all 550ms ease;
   width: 10px;
@@ -47,6 +68,22 @@ body {
   text-align: center;
   margin: 0;
   padding: 1em;
+}
+
+.Assignment-Container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex: 1 0 33%;
+  justify-content: space-between;
+}
+
+.Document {
+  margin-bottom: -5vh;
+}
+
+.Assignment {
+  margin: 1em;
 }
 
 .navObj {
