@@ -2,6 +2,7 @@ import { React, useState } from 'react';
 import '../App.scss';
 import { Document, pdfjs, Page } from 'react-pdf';
 import assignmentOne from '../assignments/assn1.pdf'
+import assignmentOneSlides from '../assignments/Assignment1Slides.pdf'
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
@@ -25,6 +26,8 @@ function Assignments() {
               <div className='Assignment'>
                 <h4>Assignment 1 - Conceptual Architecture Report</h4>
                 <a className='button'href={assignmentOne} target="_blank" rel="noreferrer">Download</a>
+                <h4>Slides & Video</h4>
+                <a className='button'href={assignmentOneSlides} target="_blank" rel="noreferrer">Download</a>
               </div>
               <div className='Assignment'>
                 <h4>Assignment 2 - Concrete Architecture Report</h4>
