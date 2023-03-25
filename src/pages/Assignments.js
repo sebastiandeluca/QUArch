@@ -3,6 +3,8 @@ import '../App.scss';
 import { Document, pdfjs, Page } from 'react-pdf';
 import assignmentOne from '../assignments/assn1.pdf'
 import assignmentOneSlides from '../assignments/Assignment1Slides.pdf'
+import assignmentTwo from '../assignments/assn2.pdf'
+import assignmentTwoSlides from '../assignments/Assignment2Slides.pdf'
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
@@ -31,7 +33,10 @@ function Assignments() {
               </div>
               <div className='Assignment'>
                 <h4>Assignment 2 - Concrete Architecture Report</h4>
-                <p>Not yet available.</p>
+                <a className='button'href={assignmentTwo} target="_blank" rel="noreferrer">Download</a>
+                <h4>Slides & Video</h4>
+                <a className='button'href={assignmentTwoSlides} target="_blank" rel="noreferrer">Download</a><br></br><br></br>
+                The video attached to the slides is available <a href="https://youtu.be/sVerKydI0Rc">here.</a>
               </div>
               <div className='Assignment'>
                 <h4>Assignment 3 - Proposal for Enhancement Report</h4>
